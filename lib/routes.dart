@@ -6,6 +6,8 @@ import 'pages/controller_demo_page/controller_demo_page.dart'
 import 'pages/clip_demo_page/clip_demo_page.dart' deferred as clip_demo_page;
 import 'pages/scroll_listener_demo_page/scroll_listener_demo_page.dart'
     deferred as scroll_listener_demo_page;
+import 'pages/scroll_to_index_demo_page/scroll_to_index_demo_page.dart'
+    deferred as scroll_to_index_demo_page;
 
 Map<String, WidgetBuilder> routers = {
   "文本输入框简单的 Controller": (context) {
@@ -23,6 +25,12 @@ Map<String, WidgetBuilder> routers = {
     return ContainerAsyncRouterPage(scroll_listener_demo_page.loadLibrary(),
         (context) {
       return scroll_listener_demo_page.ScrollListenerDemoPage();
+    });
+  },
+  "列表滑动到指定位置": (context) {
+    return ContainerAsyncRouterPage(scroll_to_index_demo_page.loadLibrary(),
+        (context) {
+      return scroll_to_index_demo_page.ScrollToIndexDemoPage();
     });
   },
 };

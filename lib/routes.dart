@@ -10,6 +10,8 @@ import 'pages/scroll_to_index_demo_page/scroll_to_index_demo_page.dart'
     deferred as scroll_to_index_demo_page;
 import 'pages/gradient_text_demo_page/gradient_text_demo_page.dart'
     deferred as gradient_text_demo_page;
+import 'pages/transform_demo_page/transform_demo_page.dart'
+    deferred as transform_demo_page;
 
 Map<String, WidgetBuilder> routers = {
   "文本输入框简单的 Controller": (context) {
@@ -39,6 +41,12 @@ Map<String, WidgetBuilder> routers = {
     return ContainerAsyncRouterPage(gradient_text_demo_page.loadLibrary(),
         (context) {
       return gradient_text_demo_page.GradientTextDemoPage();
+    });
+  },
+  "Transform 效果展示": (context) {
+    return ContainerAsyncRouterPage(transform_demo_page.loadLibrary(),
+        (context) {
+      return transform_demo_page.TransformDemoPage();
     });
   },
 };

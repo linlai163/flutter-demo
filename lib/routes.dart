@@ -20,6 +20,8 @@ import 'pages/refresh_demo_page/refresh_demo_page_2.dart'
     deferred as refresh_demo_page2;
 import 'pages/refresh_demo_page/refrsh_demo_page_3.dart'
     deferred as refresh_demo_page3;
+import 'pages/position_demo_page/position_demo_page.dart'
+    deferred as position_demo_page;
 
 Map<String, WidgetBuilder> routers = {
   "文本输入框简单的 Controller": (context) {
@@ -78,6 +80,12 @@ Map<String, WidgetBuilder> routers = {
     return ContainerAsyncRouterPage(refresh_demo_page3.loadLibrary(),
         (context) {
       return refresh_demo_page3.RefreshDemoPage3();
+    });
+  },
+  "通过绝对定位布局": (context) {
+    return ContainerAsyncRouterPage(position_demo_page.loadLibrary(),
+        (context) {
+      return position_demo_page.PositionedDemoPage();
     });
   }
 };

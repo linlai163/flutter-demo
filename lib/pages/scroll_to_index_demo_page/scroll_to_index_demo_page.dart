@@ -50,7 +50,7 @@ class _ScrollToIndexDemoPageState extends State<ScrollToIndexDemoPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("ScrollToIndexDemoPage")),
+      appBar: AppBar(title: const Text("Scroll To Index Demo Page")),
       body: ListView(
         scrollDirection: scrollDirection,
         controller: controller,

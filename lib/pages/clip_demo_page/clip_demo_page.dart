@@ -6,7 +6,7 @@ class ClipDemoPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("ClipDemoPage")),
+      appBar: AppBar(title: const Text("Clip Demo Page")),
       body: Container(
         alignment: Alignment.center,
         margin: const EdgeInsets.all(10),

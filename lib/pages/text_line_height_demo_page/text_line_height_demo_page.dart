@@ -15,7 +15,7 @@ class TextLineHeightDemoPage extends StatelessWidget {
     const double fontSize = 16;
     return Scaffold(
       appBar: AppBar(
-        title: const Text("TextLineHeightDemoPage"),
+        title: const Text("Text Line Height Demo Page"),
       ),
       body: Container(
         color: GlobalVariables.greyBackgroundCOlor,

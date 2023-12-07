@@ -31,7 +31,7 @@ class _ScrollListenerDemoPageState extends State<ScrollListenerDemoPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("ScrollListenerDemoPage")),
+      appBar: AppBar(title: const Text("Scroll Listener Demo Page")),
       body: Container(
         alignment: Alignment.center,
         child: NotificationListener(

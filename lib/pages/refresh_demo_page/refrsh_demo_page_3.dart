@@ -72,7 +72,7 @@ class RefreshDemoPageState3 extends State<RefreshDemoPage3> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("RefreshDemoPage"),
+        title: const Text("Refresh Demo Page 3"),
       ),
       body: NotificationListener(
         onNotification: (ScrollNotification notification) {

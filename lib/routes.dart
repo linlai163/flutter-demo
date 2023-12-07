@@ -14,6 +14,12 @@ import 'pages/transform_demo_page/transform_demo_page.dart'
     deferred as transform_demo_page;
 import 'pages/text_line_height_demo_page/text_line_height_demo_page.dart'
     deferred as text_line_height_demo_page;
+import 'pages/refresh_demo_page/refresh_demo_page.dart'
+    deferred as refresh_demo_page;
+import 'pages/refresh_demo_page/refresh_demo_page_2.dart'
+    deferred as refresh_demo_page2;
+import 'pages/refresh_demo_page/refrsh_demo_page_3.dart'
+    deferred as refresh_demo_page3;
 
 Map<String, WidgetBuilder> routers = {
   "文本输入框简单的 Controller": (context) {
@@ -55,6 +61,23 @@ Map<String, WidgetBuilder> routers = {
     return ContainerAsyncRouterPage(text_line_height_demo_page.loadLibrary(),
         (context) {
       return text_line_height_demo_page.TextLineHeightDemoPage();
+    });
+  },
+  "简单上下刷新 1": (context) {
+    return ContainerAsyncRouterPage(refresh_demo_page.loadLibrary(), (context) {
+      return refresh_demo_page.RefreshDemoPage1();
+    });
+  },
+  "简单上下刷新 2": (context) {
+    return ContainerAsyncRouterPage(refresh_demo_page2.loadLibrary(),
+        (context) {
+      return refresh_demo_page2.RefreshDemoPage2();
+    });
+  },
+  "简单上下刷新 3": (context) {
+    return ContainerAsyncRouterPage(refresh_demo_page3.loadLibrary(),
+        (context) {
+      return refresh_demo_page3.RefreshDemoPage3();
     });
   }
 };

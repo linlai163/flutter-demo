@@ -12,6 +12,8 @@ import 'pages/gradient_text_demo_page/gradient_text_demo_page.dart'
     deferred as gradient_text_demo_page;
 import 'pages/transform_demo_page/transform_demo_page.dart'
     deferred as transform_demo_page;
+import 'pages/text_line_height_demo_page/text_line_height_demo_page.dart'
+    deferred as text_line_height_demo_page;
 
 Map<String, WidgetBuilder> routers = {
   "文本输入框简单的 Controller": (context) {
@@ -49,4 +51,10 @@ Map<String, WidgetBuilder> routers = {
       return transform_demo_page.TransformDemoPage();
     });
   },
+  "计算另类文本行间距展示": (context) {
+    return ContainerAsyncRouterPage(text_line_height_demo_page.loadLibrary(),
+        (context) {
+      return text_line_height_demo_page.TextLineHeightDemoPage();
+    });
+  }
 };

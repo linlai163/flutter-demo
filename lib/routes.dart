@@ -22,6 +22,8 @@ import 'pages/refresh_demo_page/refrsh_demo_page_3.dart'
     deferred as refresh_demo_page3;
 import 'pages/position_demo_page/position_demo_page.dart'
     deferred as position_demo_page;
+import 'pages/bubble_demo_page/bubble_demo_page.dart'
+    deferred as bubble_demo_page;
 
 Map<String, WidgetBuilder> routers = {
   "文本输入框简单的 Controller": (context) {
@@ -86,6 +88,11 @@ Map<String, WidgetBuilder> routers = {
     return ContainerAsyncRouterPage(position_demo_page.loadLibrary(),
         (context) {
       return position_demo_page.PositionedDemoPage();
+    });
+  },
+  "气泡提示框": (context) {
+    return ContainerAsyncRouterPage(bubble_demo_page.loadLibrary(), (context) {
+      return bubble_demo_page.BubbleDemoPage();
     });
   }
 };

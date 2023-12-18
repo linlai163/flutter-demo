@@ -25,6 +25,7 @@ import 'pages/position_demo_page/position_demo_page.dart'
 import 'pages/bubble_demo_page/bubble_demo_page.dart'
     deferred as bubble_demo_page;
 import 'pages/tag_demo_page/tag_demo_page.dart' deferred as tag_demo_page;
+import 'pages/honor_demo_page/honor_demo_page.dart' deferred as honor_demo_page;
 
 Map<String, WidgetBuilder> routers = {
   "文本输入框简单的 Controller": (context) {
@@ -100,5 +101,10 @@ Map<String, WidgetBuilder> routers = {
     return ContainerAsyncRouterPage(tag_demo_page.loadLibrary(), (context) {
       return tag_demo_page.TagDemoPage();
     });
-  }
+  },
+  "共享元素跳转效果": (context) {
+    return ContainerAsyncRouterPage(honor_demo_page.loadLibrary(), (context) {
+      return honor_demo_page.HonorDemoPage();
+    });
+  },
 };

@@ -24,6 +24,7 @@ import 'pages/position_demo_page/position_demo_page.dart'
     deferred as position_demo_page;
 import 'pages/bubble_demo_page/bubble_demo_page.dart'
     deferred as bubble_demo_page;
+import 'pages/tag_demo_page/tag_demo_page.dart' deferred as tag_demo_page;
 
 Map<String, WidgetBuilder> routers = {
   "文本输入框简单的 Controller": (context) {
@@ -93,6 +94,11 @@ Map<String, WidgetBuilder> routers = {
   "气泡提示框": (context) {
     return ContainerAsyncRouterPage(bubble_demo_page.loadLibrary(), (context) {
       return bubble_demo_page.BubbleDemoPage();
+    });
+  },
+  "Tag 效果展示": (context) {
+    return ContainerAsyncRouterPage(tag_demo_page.loadLibrary(), (context) {
+      return tag_demo_page.TagDemoPage();
     });
   }
 };

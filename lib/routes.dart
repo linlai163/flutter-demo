@@ -30,6 +30,8 @@ import 'pages/silder_verify_page/silder_verify_page.dart'
     deferred as silder_verify_page;
 import 'pages/wrap_content_page/wrap_content_page.dart'
     deferred as wrap_content_page;
+import 'pages/statusbar_demo_page/statusbar_demo_page.dart'
+    deferred as statusbar_demo_page;
 
 Map<String, WidgetBuilder> routers = {
   "文本输入框简单的 Controller": (context) {
@@ -120,6 +122,12 @@ Map<String, WidgetBuilder> routers = {
   "warpContent实现": (context) {
     return ContainerAsyncRouterPage(wrap_content_page.loadLibrary(), (context) {
       return wrap_content_page.WrapContentPage();
+    });
+  },
+  "状态栏颜色修改（仅 App）": (context) {
+    return ContainerAsyncRouterPage(statusbar_demo_page.loadLibrary(),
+        (context) {
+      return statusbar_demo_page.StatusBarDemoPage();
     });
   },
 };

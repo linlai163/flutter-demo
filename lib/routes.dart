@@ -28,6 +28,8 @@ import 'pages/tag_demo_page/tag_demo_page.dart' deferred as tag_demo_page;
 import 'pages/honor_demo_page/honor_demo_page.dart' deferred as honor_demo_page;
 import 'pages/silder_verify_page/silder_verify_page.dart'
     deferred as silder_verify_page;
+import 'pages/wrap_content_page/wrap_content_page.dart'
+    deferred as wrap_content_page;
 
 Map<String, WidgetBuilder> routers = {
   "文本输入框简单的 Controller": (context) {
@@ -113,6 +115,11 @@ Map<String, WidgetBuilder> routers = {
     return ContainerAsyncRouterPage(silder_verify_page.loadLibrary(),
         (context) {
       return silder_verify_page.SlideVerifyPage();
+    });
+  },
+  "warpContent实现": (context) {
+    return ContainerAsyncRouterPage(wrap_content_page.loadLibrary(), (context) {
+      return wrap_content_page.WrapContentPage();
     });
   },
 };

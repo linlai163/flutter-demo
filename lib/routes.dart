@@ -34,6 +34,7 @@ import 'pages/statusbar_demo_page/statusbar_demo_page.dart'
     deferred as statusbar_demo_page;
 import 'pages/keyboard_demo_page/keyboard_demo_page.dart'
     deferred as keyboard_demo_page;
+import 'pages/anima_demo_page/anima_demo_page.dart' deferred as anima_demo_page;
 
 Map<String, WidgetBuilder> routers = {
   "文本输入框简单的 Controller": (context) {
@@ -136,6 +137,11 @@ Map<String, WidgetBuilder> routers = {
     return ContainerAsyncRouterPage(keyboard_demo_page.loadLibrary(),
         (context) {
       return keyboard_demo_page.KeyBoardDemoPage();
+    });
+  },
+  "控件动画组合展示（旋转加放大圆）": (context) {
+    return ContainerAsyncRouterPage(anima_demo_page.loadLibrary(), (context) {
+      return anima_demo_page.AnimaDemoPage();
     });
   },
 };

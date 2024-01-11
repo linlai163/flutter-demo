@@ -32,6 +32,8 @@ import 'pages/wrap_content_page/wrap_content_page.dart'
     deferred as wrap_content_page;
 import 'pages/statusbar_demo_page/statusbar_demo_page.dart'
     deferred as statusbar_demo_page;
+import 'pages/keyboard_demo_page/keyboard_demo_page.dart'
+    deferred as keyboard_demo_page;
 
 Map<String, WidgetBuilder> routers = {
   "文本输入框简单的 Controller": (context) {
@@ -128,6 +130,12 @@ Map<String, WidgetBuilder> routers = {
     return ContainerAsyncRouterPage(statusbar_demo_page.loadLibrary(),
         (context) {
       return statusbar_demo_page.StatusBarDemoPage();
+    });
+  },
+  "键盘弹出与监听（仅 App）": (context) {
+    return ContainerAsyncRouterPage(keyboard_demo_page.loadLibrary(),
+        (context) {
+      return keyboard_demo_page.KeyBoardDemoPage();
     });
   },
 };
